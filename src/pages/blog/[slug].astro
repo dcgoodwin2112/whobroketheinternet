@@ -30,15 +30,11 @@ function formatDate(date: Date) {
 <BaseLayout title={`${post.data.title} - Who Broke The Internet?`} description={post.data.excerpt}>
   <article class="pb-12">
     <header class="mb-12">
-      <a
-        href="/"
-        class="inline-flex items-center gap-2 mb-8 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors font-medium"
-      >
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to all posts</span>
+      <a href="/" class="inline-block mb-8">
+        ← Back to all posts
       </a>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-neutral-900 dark:text-neutral-50">{post.data.title}</h1>
-      <div class="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400 pb-6 border-b border-neutral-200 dark:border-neutral-700">
+      <h1 class="text-4xl md:text-5xl mb-6 leading-tight">{post.data.title}</h1>
+      <div class="flex items-center gap-4 text-sm pb-6 border-b border-neutral-200 dark:border-neutral-700">
         <time datetime={post.data.date.toISOString()}>
           {formatDate(post.data.date)}
         </time>
@@ -47,7 +43,7 @@ function formatDate(date: Date) {
       </div>
     </header>
 
-    <div class="prose dark:prose-invert mx-auto">
+    <div class="prose mx-auto">
       <Content />
     </div>
   </article>

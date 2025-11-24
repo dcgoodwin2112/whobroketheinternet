@@ -18,25 +18,21 @@ function formatDate(date: Date) {
 <BaseLayout>
   {posts.map((post) => (
     <article class="mb-16 pb-12 border-b border-neutral-200 dark:border-neutral-700 last:border-b-0">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-        <a href={`/blog/${post.slug}`} class="text-neutral-900 dark:text-neutral-50 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">
+      <h2 class="text-3xl md:text-4xl mb-4 leading-tight">
+        <a href={`/blog/${post.slug}`}>
           {post.data.title}
         </a>
       </h2>
-      <div class="flex items-center gap-3 mb-6 text-sm text-neutral-600 dark:text-neutral-400">
+      <div class="flex items-center gap-3 mb-6 text-sm">
         <time datetime={post.data.date.toISOString()}>
           {formatDate(post.data.date)}
         </time>
         <span>•</span>
         <span>{post.data.author}</span>
       </div>
-      <p class="mb-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">{post.data.excerpt}</p>
-      <a
-        href={`/blog/${post.slug}`}
-        class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-blue-600 text-white rounded-md font-medium hover:bg-neutral-700 dark:hover:bg-blue-700 transition-colors"
-      >
-        <span>Read More</span>
-        <i class="fas fa-arrow-right text-sm"></i>
+      <p class="mb-6 text-lg leading-relaxed">{post.data.excerpt}</p>
+      <a href={`/blog/${post.slug}`}>
+        Read more →
       </a>
     </article>
   ))}
