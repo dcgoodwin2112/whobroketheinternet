@@ -20,10 +20,10 @@
   --bg-tertiary: #ebe7de;
   --text-primary: #3d3d3d;
   --text-secondary: #5c4a3a;
-  --text-muted: #8b7355;
-  --accent: #8b7355;
-  --accent-light: #d4b896;
-  --accent-dark: #6d5a45;
+  --text-muted: #6d5a45;
+  --accent: #6d5a45;
+  --accent-light: #8b7355;
+  --accent-dark: #5a4835;
   --border-color: #e8ddd3;
   --shadow: rgba(139, 115, 85, 0.1);
 }
@@ -200,7 +200,6 @@ main article time {
 
 main article p {
   font-family: 'Source Serif Pro', Georgia, serif;
-  color: var(--text-secondary);
 }
 
 .dark main article p {
@@ -358,10 +357,6 @@ article header a:hover {
 /* Comfortable paragraph spacing */
 .prose p {
   margin-bottom: 1.5rem;
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
 }
 
 /* First paragraph emphasis */
@@ -524,6 +519,42 @@ article header a:hover {
   padding: 0;
   font-size: 0.875rem;
   font-weight: 400;
+}
+
+/* ============================================
+   IMAGE STYLES
+   ============================================ */
+
+/* Cover images in article headers */
+.cover-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Inline images in markdown */
+.prose img {
+  margin: 2.5rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Figure captions */
+.prose figure {
+  margin: 2.5rem 0;
+}
+
+.prose figcaption {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
 }
 
 /* ============================================

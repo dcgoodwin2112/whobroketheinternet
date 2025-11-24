@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -34,12 +35,26 @@ function formatDate(date: Date) {
         ← Back to all posts
       </a>
       <h1 class="text-4xl md:text-5xl mb-6 leading-tight">{post.data.title}</h1>
+      {post.data.cover && (
+        <Image
+          src={post.data.cover}
+          alt={post.data.coverAlt || post.data.title}
+          class="cover-image mb-6"
+          loading="eager"
+        />
+      )}
       <div class="flex items-center gap-4 text-sm pb-6 border-b border-neutral-200 dark:border-neutral-700">
         <time datetime={post.data.date.toISOString()}>
           {formatDate(post.data.date)}
         </time>
         <span>•</span>
         <span>By {post.data.author}</span>
+        {post.data?.assistant && (
+          <>
+            <span>•</span>
+            <span>Assisted by {post.data.assistant}</span>
+          </>
+        )}
       </div>
     </header>
 
