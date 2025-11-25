@@ -282,7 +282,7 @@ Top-heavy frameworks that require multiple layers of approval struggle to match 
 
 Traditional estimation is getting harder. Story points assume predictable effort-to-output ratios, but AI breaks this completely. A "5-point story" could take 5 minutes with AI assistance or 5 days of careful oversight. The same task might be trivial with the right AI tool or impossible if the AI hits a blind spot.
 
-Some teams are starting to abandon points for outcome-based metrics: experiments run, hypotheses tested, value delivered. The question shifts from "How many features did we ship?" to "How many ideas did we validate?"
+Some teams may start to abandon points for outcome-based metrics: experiments run, hypotheses tested, value delivered. The question shifts from "How many features did we ship?" to "How many ideas did we validate?"
 
 When building becomes cheap but understanding remains expensive, speed of learning matters most. "Failed fast" becomes a success metric when experiments cost almost nothing. Teams that optimize for time-to-insight rather than time-to-delivery may have the advantage.
 
