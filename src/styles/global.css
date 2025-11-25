@@ -15,8 +15,8 @@
 
 :root {
   /* Light mode colors */
-  --bg-primary: #faf8f3;
-  --bg-secondary: #f5f1e8;
+  --bg-primary: #f5f1e8;
+  --bg-secondary: #faf8f3;
   --bg-tertiary: #ebe7de;
   --text-primary: #3d3d3d;
   --text-secondary: #5c4a3a;
@@ -223,8 +223,8 @@ main article a[href^="/blog/"]:hover {
    ============================================ */
 
 main {
-  background: var(--bg-primary);
-  padding: 3rem 2rem !important;
+  background: var(--bg-secondary);
+  /* padding: 3rem 2rem !important; */
 }
 
 main > div {
@@ -244,7 +244,6 @@ main > div {
 
 /* Base typography */
 .prose {
-  max-width: 82ch;
   font-size: 1.1875rem;
   line-height: 1.7;
   font-family: 'Source Serif Pro', Georgia, serif;
