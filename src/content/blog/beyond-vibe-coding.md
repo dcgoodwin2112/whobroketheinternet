@@ -181,11 +181,11 @@ Develop a sense for when AI actually saves time:
 
 ### The Shifting Landscape
 
-The job market data is hard to ignore. [Software developer postings are down significantly from their 2022 peak](https://blog.pragmaticengineer.com/software-engineer-jobs-five-year-low/). [Computer science and computer engineering graduates are facing unemployment rates nearly double the national average](https://www.newyorkfed.org/research/college-labor-market). These trends don't mean developers are becoming obsolete – but they do suggest the role is shifting, and the skills that get you hired are changing too.
+If you're a recent graduate or early-career developer, you're entering the field at a complicated moment. [Employment for software developers aged 22-25 has declined by nearly 20% from its 2022 peak](https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf), while employment for older developers continues to grow. It's natural to wonder whether AI is making junior roles obsolete. But the reality is more nuanced – the skills that get you hired are shifting, and understanding that shift matters more than ever when you're just starting out.
 
-This isn't limited to entry-level positions. If AI agents can handle routine tasks that juniors used to do, they're already capable of much of the repetitive work that mid-level developers handle as well. The traditional path of moving from simple tickets to complex features to system design isn't going to look the same going forward.
+The shift isn't limited to entry-level roles. Research suggests AI's impact follows a "seniority bias" pattern – it's changing what employers expect at every experience level. Junior roles are declining because AI can handle many traditional starter tasks, but mid-level positions are evolving too as routine implementation work becomes increasingly automated. The traditional career ladder – simple tickets, then complex features, then system design – is being compressed and rearranged.
 
-The developers who navigate this well – both junior and senior – will likely be the ones who shift their focus to higher-value work. Not competing with AI on writing boilerplate or implementing CRUD operations, but focusing on the things AI can't do.
+What does this mean for the hiring landscape? Employers are looking for different signals. They're less interested in whether you can implement a standard authentication flow and more interested in whether you understand when to use one. Knowing React or Python syntax has become table stakes – the differentiators are knowing which problems are worth solving in the first place, how to architect solutions that AI tools can help build, when to push back on requirements that don't make sense, and building the trust that makes teams want to work with you. These are the skills that get you hired now, and they're learnable regardless of where you are in your career.
 
 ### The New Core Competencies
 
@@ -328,7 +328,7 @@ We started with that meme – the laptop with a giant red button labeled "Make M
 
 The term "vibe-coding" carries that same oversimplification. It suggests we're just casually prompting our way through development, letting machines do the real work while we vibe. But having spent real time with these tools, I can say the reality is far more interesting and complex.
 
-Like the electronic musician who combines synthesizers, samples, and effects to create something entirely new, developers working with AI agents are learning to orchestrate intelligent systems. We're not being replaced – we're being amplified. But that amplification only works if we evolve our skills accordingly.
+Like the electronic musician who combines synthesizers, samples, and effects to create something entirely new, developers working with AI agents are learning to orchestrate intelligent systems. We're not being replaced – we're being amplified. But that amplification only works if we evolve our skills from coding to orchestrating.
 
 The skills gap isn't about learning to write better prompts. It's about becoming fluent in a new form of development where human creativity, judgment, and strategic thinking matter more than ever. Where understanding business problems deeply matters more than syntax. Where knowing when NOT to use AI is as important as knowing how to use it.
 
