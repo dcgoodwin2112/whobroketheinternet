@@ -328,7 +328,7 @@ We started with that meme – the laptop with a giant red button labeled "Make M
 
 The term "vibe-coding" carries that same oversimplification. It suggests we're just casually prompting our way through development, letting machines do the real work while we vibe. But having spent real time with these tools, I can say the reality is far more interesting and complex.
 
-Like the electronic musician who combines synthesizers, samples, and effects to create something entirely new, developers working with AI agents are learning to orchestrate intelligent systems. We're not being replaced – we're being amplified. But that amplification only works if we evolve our skills from coding to orchestrating.
+Like the electronic musician who combines synthesizers, samples, and effects to create something entirely new, developers working with AI agents are learning to conduct intelligent systems. We’re not being replaced – we’re being amplified. But that amplification only works if we evolve our skills from coding to orchestrating.
 
 The skills gap isn't about learning to write better prompts. It's about becoming fluent in a new form of development where human creativity, judgment, and strategic thinking matter more than ever. Where understanding business problems deeply matters more than syntax. Where knowing when NOT to use AI is as important as knowing how to use it.
 
