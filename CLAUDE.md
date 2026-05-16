@@ -8,54 +8,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run dev       # Dev server at localhost:4321
 npm run build     # Build to ./dist/
 npm run preview   # Preview production build
-npm run astro     # Run Astro CLI commands
+npx astro check   # Type-check .astro files
 ```
 
-## Architecture
+## Stack
 
-**Astro 5.16.0** with TypeScript (strict mode) and **Tailwind CSS v4**
+Astro 5 with TypeScript (`astro/tsconfigs/strict`) and Tailwind CSS v4. Tailwind is wired in via `@tailwindcss/vite` in `astro.config.mjs` — no `tailwind.config.*` file; configuration lives in `src/styles/global.css` using v4's CSS-first config.
 
-### Routing
-File-based routing in `src/pages/`. Each `.astro` or `.md` file becomes a route matching its filename.
+Font Awesome Free is a dependency (`@fortawesome/fontawesome-free`); icons are referenced from its CSS rather than per-icon imports.
 
-### TypeScript
-- Extends `astro/tsconfigs/strict`
-- Type checking: `npx astro check`
+## Content Collections
 
-### Tailwind CSS
-- Tailwind v4 integrated via Vite plugin (see `astro.config.mjs`)
-- Dark mode enabled with `class` strategy
-- Global styles in `src/styles/global.css`
+Blog posts live in `src/content/blog/` and are validated by the schema in [src/content/config.ts](src/content/config.ts):
 
-### Content Collections
-Blog posts managed via Content Collections in `src/content/blog/`. Schema defined in `src/content/config.ts`:
-- `title`: string
-- `date`: Date
-- `author`: string
-- `excerpt`: string
+- `title` (string), `date` (Date), `author` (string), `excerpt` (string) — required
+- `cover` (image), `coverAlt` (string), `assistant` (string) — optional
 
-### Theme System
-Light/dark mode toggle with localStorage persistence. Theme preference syncs with system preference on first visit.
+Images referenced as `cover:` should be placed in `src/content/blog/images/` so Astro's `image()` loader resolves them relative to the post.
 
-### Project Structure
-```
-src/
-├── content/
-│   ├── config.ts       # Content collection schemas
-│   └── blog/           # Blog posts (markdown)
-├── layouts/
-│   └── BaseLayout.astro  # Base layout with theme toggle
-├── pages/
-│   ├── index.astro     # Homepage (blog listing)
-│   └── blog/[slug].astro  # Individual blog posts
-└── styles/
-    └── global.css      # Global styles + prose
-public/                 # Static assets
-```
+Posts are rendered by `src/pages/blog/[slug].astro` and listed (newest-first) by `src/pages/index.astro`.
+
+## Theme System
+
+Light/dark toggle implemented in `src/layouts/BaseLayout.astro` with `localStorage` persistence and a system-preference fallback. Dark mode uses Tailwind's `class` strategy — apply `dark:` variants in markup rather than relying on `prefers-color-scheme`.
 
 ## Creating Blog Posts
-
-Add markdown files to `src/content/blog/`:
 
 ```md
 ---
@@ -63,9 +40,10 @@ title: "Post Title"
 date: 2025-11-22
 author: "Author Name"
 excerpt: "Brief description for homepage listing"
+cover: "./images/cover.png"      # optional
+coverAlt: "Alt text"              # optional
+assistant: "Claude Opus 4.7"      # optional
 ---
 
 Post content in markdown...
 ```
-
-Posts automatically appear on homepage, sorted by date (newest first).
