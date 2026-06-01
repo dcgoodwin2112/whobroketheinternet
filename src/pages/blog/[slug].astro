@@ -35,6 +35,9 @@ function formatDate(date: Date) {
         ← Back to all posts
       </a>
       <h1 class="text-4xl md:text-5xl mb-6 leading-tight">{post.data.title}</h1>
+      {post.data.subtitle && (
+        <p class="post-subtitle">{post.data.subtitle}</p>
+      )}
       {post.data.cover && (
         <Image
           src={post.data.cover}
