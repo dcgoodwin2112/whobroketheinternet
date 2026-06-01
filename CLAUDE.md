@@ -8,8 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run dev       # Dev server at localhost:4321
 npm run build     # Build to ./dist/
 npm run preview   # Preview production build
-npx astro check   # Type-check .astro files
 ```
+
+No type-check script is configured (`astro check` would require adding `@astrojs/check` + `typescript`).
 
 ## Stack
 
@@ -22,7 +23,9 @@ Font Awesome Free is a dependency (`@fortawesome/fontawesome-free`); icons are r
 Blog posts live in `src/content/blog/` and are validated by the schema in [src/content/config.ts](src/content/config.ts):
 
 - `title` (string), `date` (Date), `author` (string), `excerpt` (string) — required
-- `cover` (image), `coverAlt` (string), `assistant` (string) — optional
+- `subtitle` (string), `cover` (image), `coverAlt` (string), `assistant` (string) — optional
+
+`subtitle`, when set, renders as a dek between the title and the cover image.
 
 Images referenced as `cover:` should be placed in `src/content/blog/images/` so Astro's `image()` loader resolves them relative to the post.
 
@@ -37,6 +40,7 @@ Light/dark toggle implemented in `src/layouts/BaseLayout.astro` with `localStora
 ```md
 ---
 title: "Post Title"
+subtitle: "Optional dek shown above the cover"   # optional
 date: 2025-11-22
 author: "Author Name"
 excerpt: "Brief description for homepage listing"
